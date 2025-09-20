@@ -895,7 +895,9 @@ const HeroPage = () => {
             </div>
 
             {/* Map */}
-            <LocationPanel isDarkMode={isDarkMode} />
+            <div className="mt-16 sticky top-28">
+              <LocationPanel isDarkMode={isDarkMode} />
+            </div>
           </div>
         </div>
       </section>
