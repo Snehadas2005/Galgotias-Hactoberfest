@@ -754,11 +754,11 @@ const HeroPage = () => {
         </div>
       </section>
 
-      {/* Location Section */}
       <section
         className={`py-20 px-6 ${isDarkMode ? "bg-gray-900" : "bg-white"}`}
       >
         <div className="max-w-6xl mx-auto">
+          {/* Section Header */}
           <div className="text-center mb-16">
             <div
               className={`inline-flex items-center px-6 py-3 ${
@@ -779,120 +779,122 @@ const HeroPage = () => {
             </h3>
           </div>
 
+          {/* Left Side Details */}
           <div className="grid lg:grid-cols-2 gap-12 items-center">
-            {/* Left Column */}
             <div className="space-y-6">
-              <div className="mb-8">
-                <h4
-                  className={`text-2xl font-bold ${
-                    isDarkMode ? "text-white" : "text-gray-900"
-                  } mb-6 font-mono`}
+              <h4
+                className={`text-2xl font-bold ${
+                  isDarkMode ? "text-white" : "text-gray-900"
+                } mb-6 font-mono`}
+              >
+                GALGOTIAS_UNIVERSITY.campus
+              </h4>
+
+              <div className="space-y-6">
+                {/* Location Details */}
+                <div
+                  className={`p-6 ${
+                    isDarkMode ? "bg-gray-800" : "bg-gray-100"
+                  } rounded-lg cyber-panel`}
                 >
-                  GALGOTIAS_UNIVERSITY.campus
-                </h4>
-
-                <div className="space-y-6">
-                  <div
-                    className={`p-6 ${
-                      isDarkMode ? "bg-gray-800" : "bg-gray-100"
-                    } rounded-lg cyber-panel`}
-                  >
-                    <div className="flex items-start space-x-3">
-                      <MapPin
-                        className={`w-5 h-5 ${
-                          isDarkMode ? "text-pink-400" : "text-pink-600"
-                        } mt-1`}
-                      />
-                      <div>
-                        <p
-                          className={`font-medium ${
-                            isDarkMode ? "text-white" : "text-gray-900"
-                          } font-mono mb-1`}
-                        >
-                          GPS_COORDINATES:
-                        </p>
-                        <p
-                          className={`${
-                            isDarkMode ? "text-gray-300" : "text-gray-600"
-                          } font-mono text-sm`}
-                        >
-                          Plot No. 2, Yamuna Expressway
-                          <br />
-                          Sector 17A, Greater Noida
-                          <br />
-                          Uttar Pradesh 203201
-                        </p>
-                      </div>
+                  <div className="flex items-start space-x-3">
+                    <MapPin
+                      className={`w-5 h-5 ${
+                        isDarkMode ? "text-pink-400" : "text-pink-600"
+                      } mt-1`}
+                    />
+                    <div>
+                      <p
+                        className={`font-medium ${
+                          isDarkMode ? "text-white" : "text-gray-900"
+                        } font-mono mb-1`}
+                      >
+                        GPS_COORDINATES:
+                      </p>
+                      <p
+                        className={`${
+                          isDarkMode ? "text-gray-300" : "text-gray-600"
+                        } font-mono text-sm`}
+                      >
+                        Plot No. 2, Yamuna Expressway
+                        <br />
+                        Sector 17A, Greater Noida
+                        <br />
+                        Uttar Pradesh 203201
+                      </p>
                     </div>
                   </div>
+                </div>
 
-                  <div
-                    className={`p-6 ${
-                      isDarkMode ? "bg-gray-800" : "bg-gray-100"
-                    } rounded-lg cyber-panel`}
-                  >
-                    <div className="flex items-start space-x-3">
-                      <Calendar
-                        className={`w-5 h-5 ${
-                          isDarkMode ? "text-purple-400" : "text-purple-600"
-                        } mt-1`}
-                      />
-                      <div>
-                        <p
-                          className={`font-medium ${
-                            isDarkMode ? "text-white" : "text-gray-900"
-                          } font-mono mb-1`}
-                        >
-                          DATE_RANGE:
-                        </p>
-                        <p
-                          className={`${
-                            isDarkMode ? "text-gray-300" : "text-gray-600"
-                          } font-mono text-sm`}
-                        >
-                          October 25-27, 2025
-                          <br />
-                          72-hour coding marathon
-                        </p>
-                      </div>
+                {/* Date */}
+                <div
+                  className={`p-6 ${
+                    isDarkMode ? "bg-gray-800" : "bg-gray-100"
+                  } rounded-lg cyber-panel`}
+                >
+                  <div className="flex items-start space-x-3">
+                    <Calendar
+                      className={`w-5 h-5 ${
+                        isDarkMode ? "text-purple-400" : "text-purple-600"
+                      } mt-1`}
+                    />
+                    <div>
+                      <p
+                        className={`font-medium ${
+                          isDarkMode ? "text-white" : "text-gray-900"
+                        } font-mono mb-1`}
+                      >
+                        DATE_RANGE:
+                      </p>
+                      <p
+                        className={`${
+                          isDarkMode ? "text-gray-300" : "text-gray-600"
+                        } font-mono text-sm`}
+                      >
+                        October 25-27, 2025
+                        <br />
+                        72-hour coding marathon
+                      </p>
                     </div>
                   </div>
-                  <div
-                    className={`p-6 ${
-                      isDarkMode ? "bg-gray-800" : "bg-gray-100"
-                    } rounded-lg cyber-panel`}
-                  >
-                    <div className="flex items-start space-x-3">
-                      <Clock
-                        className={`w-5 h-5 ${
-                          isDarkMode ? "text-blue-400" : "text-blue-600"
-                        } mt-1`}
-                      />
-                      <div>
-                        <p
-                          className={`font-medium ${
-                            isDarkMode ? "text-white" : "text-gray-900"
-                          } font-mono mb-1`}
-                        >
-                          DURATION:
-                        </p>
-                        <p
-                          className={`${
-                            isDarkMode ? "text-gray-300" : "text-gray-600"
-                          } font-mono text-sm`}
-                        >
-                          Multi-day hackathon event
-                          <br />
-                          24/7 support available
-                        </p>
-                      </div>
+                </div>
+
+                {/* Duration */}
+                <div
+                  className={`p-6 ${
+                    isDarkMode ? "bg-gray-800" : "bg-gray-100"
+                  } rounded-lg cyber-panel`}
+                >
+                  <div className="flex items-start space-x-3">
+                    <Clock
+                      className={`w-5 h-5 ${
+                        isDarkMode ? "text-blue-400" : "text-blue-600"
+                      } mt-1`}
+                    />
+                    <div>
+                      <p
+                        className={`font-medium ${
+                          isDarkMode ? "text-white" : "text-gray-900"
+                        } font-mono mb-1`}
+                      >
+                        DURATION:
+                      </p>
+                      <p
+                        className={`${
+                          isDarkMode ? "text-gray-300" : "text-gray-600"
+                        } font-mono text-sm`}
+                      >
+                        Multi-day hackathon event
+                        <br />
+                        24/7 support available
+                      </p>
                     </div>
                   </div>
                 </div>
               </div>
             </div>
 
-            {/* Location */}
+            {/* Map */}
             <LocationPanel isDarkMode={isDarkMode} />
           </div>
         </div>
@@ -1015,7 +1017,7 @@ const HeroPage = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-            
+
             {/* Registration Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
