@@ -327,7 +327,6 @@ const HeroPage = () => {
               REGISTER
             </a>
           </nav>
-
           <div className="flex items-center space-x-4 text-sm font-mono">
             <button
               onClick={() => setShowRegistrationModal(true)}
@@ -339,7 +338,7 @@ const HeroPage = () => {
         </div>
       </header>
 
-      {/* Hero Section */}
+      {/* Home Section */}
       <section
         id="home"
         className="min-h-screen flex items-center justify-center relative pt-20 px-6"
@@ -357,7 +356,8 @@ const HeroPage = () => {
               GOOGLE DEVELOPER GROUPS • GALGOTIAS UNIVERSITY
             </div>
           </div>
-          {/* Main Titles */}
+
+          {/* Proframe Tites */}
           <div className="relative mb-16 flex flex-col items-center">
             <img
               src={HfLogo}
@@ -898,19 +898,17 @@ const HeroPage = () => {
         </div>
       </section>
 
-      {/* CTA Section */}
+      {/* Footer Section */}
       <section
         id="register"
         className={`min-h-screen flex items-center justify-center bg-gradient-to-br from-purple-900 via-indigo-900 to-pink-900 text-white relative overflow-hidden`}
       >
-        {/* Animated background particles */}
         <div className="absolute inset-0">
           <div className="particles-bg"></div>
         </div>
 
         <div className="max-w-4xl mx-auto text-center relative z-10 px-6">
           <div className="mb-12">
-            {/* Pixelated HF logo */}
             <div className="mt-12 mb-12 flex justify-center">
               <img
                 src={HfLogo}
@@ -955,25 +953,25 @@ const HeroPage = () => {
 
           <div className="flex justify-center space-x-8 text-sm mb-8 font-mono">
             <a
-              href="https://github.com/gdggalgotias"
+              href="#"
               className="flex items-center space-x-2 text-pink-200 hover:text-white transition-colors cyber-link"
             >
               <Github className="w-5 h-5" />
-              <span>/gdggalgotias</span>
+              <span>/gdggu</span>
             </a>
             <a
-              href="https://twitter.com/gdggalgotias"
+              href="#"
               className="flex items-center space-x-2 text-pink-200 hover:text-white transition-colors cyber-link"
             >
               <Twitter className="w-5 h-5" />
-              <span>@gdggalgotias</span>
+              <span>@gdggu</span>
             </a>
             <a
-              href="https://linkedin.com/company/gdg-galgotias"
+              href="#"
               className="flex items-center space-x-2 text-pink-200 hover:text-white transition-colors cyber-link"
             >
               <Linkedin className="w-5 h-5" />
-              <span>gdg-galgotias</span>
+              <span>gdg-gu</span>
             </a>
           </div>
 
@@ -1017,7 +1015,8 @@ const HeroPage = () => {
                 <X className="w-5 h-5" />
               </button>
             </div>
-
+            
+            {/* Registration Form */}
             <form onSubmit={handleSubmit} className="space-y-6">
               <div className="grid md:grid-cols-2 gap-4">
                 <div>
@@ -1091,6 +1090,33 @@ const HeroPage = () => {
                     setFormData({ ...formData, college: e.target.value })
                   }
                 />
+              </div>
+
+              <div>
+                <label
+                  className={`text-sm font-medium ${
+                    isDarkMode ? "text-gray-300" : "text-gray-700"
+                  } block mb-2 font-mono`}
+                >
+                  ROLE *
+                </label>
+                <select
+                  required
+                  className={`w-full p-3 rounded-lg border-2 ${
+                    isDarkMode
+                      ? "bg-gray-700 border-purple-500/30 text-white"
+                      : "bg-white border-purple-300"
+                  } focus:border-purple-500 focus:ring-2 focus:ring-purple-500/20 outline-none transition-all duration-200 font-mono cyber-input`}
+                  value={formData.role}
+                  onChange={(e) =>
+                    setFormData({ ...formData, role: e.target.value })
+                  }
+                >
+                  <option value="">Select your role</option>
+                  <option value="project-admin">Project Admin</option>
+                  <option value="repository-mentor">Repository Mentor</option>
+                  <option value="contributor">Contributor</option>
+                </select>
               </div>
 
               <div>

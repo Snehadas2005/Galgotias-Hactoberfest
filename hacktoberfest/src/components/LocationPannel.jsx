@@ -3,7 +3,6 @@ import { MapContainer, TileLayer, Marker, Popup } from "react-leaflet";
 import "leaflet/dist/leaflet.css";
 import L from "leaflet";
 
-// Fix default marker icon issue in React-Leaflet
 delete L.Icon.Default.prototype._getIconUrl;
 L.Icon.Default.mergeOptions({
   iconRetinaUrl: "https://cdnjs.cloudflare.com/ajax/libs/leaflet/1.9.4/images/marker-icon-2x.png",
@@ -65,7 +64,6 @@ function LocationPanel({ isDarkMode }) {
         </Marker>
       </MapContainer>
 
-      {/* Optional pixelated astronaut overlay */}
       <div className="absolute top-4 left-4 z-10">
         <div className="pixelated-astronaut">
           <div className="astronaut-helmet"></div>
